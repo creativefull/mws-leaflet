@@ -1,0 +1,44 @@
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    grid-gap: 1em;
+    grid-template-columns: repeat(8, 1f);
+    grid-template-rows: 60% 40%;
+}
+
+.peta {
+    grid-column: 1/6;
+    background-color: red;
+}
+
+.gambar {
+    background-color: #DCC6E0;
+    padding: 2em;
+    grid-column: 1/4;
+    border-top-right-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.3);
+}
+.review {
+    background-color: #E74C3C;
+    grid-column: 4/6;
+    padding: 2em;
+    color: white;
+    border-top-left-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.3);
+}
+
+.brand-title {
+    margin: 0px;
+    color: #1E003D;
+}
