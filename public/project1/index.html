@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Kalkulator Ajaib</title>
+    <meta name="author" content="Tangituru Dev"/>
+    <meta name="description" content="Ini adalah sebuah contoh sebuah website mobile spesialis yang di ajarkan dari google developer kejar"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/assets/css/project1.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+</head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <a class="brand" href="/" title="MWS Tugas 1">TANGITURU</a>
+                <span class="tagline">Tugas 1 Kalkulator Ajaib</span>
+            </div>
+            <div class="content swing-in-top-bck">
+                <div>
+                    <h1 class="focus-in-expand">KALKULATOR AJAIB</h1>
+                    <input type="text" class="form-control" placeholder="0">
+                    <span class="form-operator">+</span>
+                    <input type="text" class="form-control" placeholder="0">
+                    <button class="btn btn-primary" onclick="return kalkulator()">HITUNG</button>
+                </div>
+                <div>
+                    <h1 class="hasil-calc"><span id="hasil" class="animate-count fadeIn">0</span></h1>
+                    <button class="btn btn-primary" onclick="return history.go(-1);">BACK</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="/assets/js/project1.js"></script>
+</html>

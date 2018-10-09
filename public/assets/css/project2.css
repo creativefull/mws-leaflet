@@ -1,3 +1,7 @@
+* {
+    transition: all 200ms ease-in-out;
+}
+
 html, body, #map {
     height: 100%;
     width: 100vw;
@@ -41,4 +45,30 @@ body {
 .brand-title {
     margin: 0px;
     color: #1E003D;
+}
+
+
+@media screen and (max-width: 500px) {
+    .gambar {
+        grid-column: 1/-1;
+    }
+    .gambar img {
+        width: 150px;
+    }
+    .gambar h1 {
+        font-size: 1.5em;
+    }
+    .gambar p {
+        font-size: 1em;
+    }
+
+    .review {
+        grid-column: 1/-1;
+        border-radius: 0px;
+        border-top-right-radius: 20px;
+    }
+    .container {
+        grid-template-rows: 400px 200px 100px;
+        grid-template-columns: 100%;
+    }
 }

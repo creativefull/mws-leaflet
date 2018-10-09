@@ -1,0 +1,202 @@
+* {
+    transition: all 200ms ease-in-out;
+    color: #7F8C8D;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100vw;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: minmax(10em, 1fr) minmax(max-content, 1fr) min-content;
+}
+
+.header {
+    background-color: #FEFEFE;
+    padding-top: 1em;
+    border-bottom-left-radius: .3em;
+    border-bottom-right-radius: .3em;
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, .2); */
+    display: grid;
+    grid-column: 2/3;
+    grid-template-columns: repeat(12, 1fr);
+}
+.header a.brand {
+    text-decoration: none;
+    color: #FFB28B;
+    font-family: 'Arial';
+    font-size: 2em;
+}
+.header .tagline {
+    grid-column: 1/4;
+    font-family: 'Arial';
+    font-size: 1em;
+    color: #7F8C8D;
+}
+
+.content {
+    grid-column: 2/3;
+    margin-top: 5em;
+}
+.content .hasil-calc #hasil {
+    font-size: 4em;
+    color: #FFB28B;
+    transition: all 1200ms ease-in-out;
+}
+
+.form-control {
+    border:1px solid#7F8C8D;
+    padding: 1em;
+    font-size: 1em;
+    border-radius: .5em;
+}
+.form-operator {
+    font-size: 2em;
+    padding: .5em;
+    padding-top: 1.5em;
+}
+.btn {
+    margin: 0em 1em;
+    padding: 1.2em 2em;
+    border-radius: .5em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.btn.btn-primary {
+    border:1px solid#FFB28B;
+    color: #FFB28B;
+}
+.btn.btn-primary:hover {
+    background-color: #ECF0F1;
+    border-color: #ECF0F1;
+    color: #7F8C8D;
+}
+
+.animate-count.fadeIn {
+    opacity: 1;
+    transition: 1000ms all ease-in;
+}
+.animate-count.fadeOut {
+    opacity: 0;
+    transition: 10ms all ease-out;
+}
+
+
+
+
+/* ANIMATION */
+/**
+* ----------------------------------------
+* animation focus-in-expand
+* ----------------------------------------
+*/
+.focus-in-expand {
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.swing-in-top-bck {
+    -webkit-animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+@-webkit-keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+    }
+}
+@keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+    }
+}
+/* ----------------------------------------------
+/**
+* ----------------------------------------
+* animation swing-in-top-bck
+* ----------------------------------------
+*/
+@-webkit-keyframes swing-in-top-bck {
+    0% {
+      -webkit-transform: rotateX(70deg);
+              transform: rotateX(70deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 1;
+    }
+}
+@keyframes swing-in-top-bck {
+    0% {
+        -webkit-transform: rotateX(70deg);
+                transform: rotateX(70deg);
+        -webkit-transform-origin: top;
+                transform-origin: top;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+                transform-origin: top;
+        opacity: 1;
+    }
+}
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .form-control {
+        display: block;
+        margin: 1em 0em;
+        width: 100%;
+    }
+    .form-operator {
+        padding-top: 0em;
+        padding-bottom: 2em;
+    }
+    .btn {
+        margin: 1em 0em;
+        width: 100%;
+    }
+    .content h1 {
+        font-size: 1em;
+        text-align: center;
+    }
+}

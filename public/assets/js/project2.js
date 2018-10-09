@@ -19,11 +19,17 @@ var markers = [
     [-6.757188, 111.583779]
 ]
 
+const popup = L.popup()
+
 markers.forEach(function (m) {
     L.marker(m).addTo(map);
 });
 
-let popup = L.popup()
-    .setLatLng([-6.755578, 111.582282])
-    .setContent("<img src=\"/assets/img/logo.png\" width=\"100%\"/><b><font color=\"#1E003D\">Restoran Terbaik</font></b><br/><small>This is a awesome restoran in Rembang City</small>")
-    .openOn(map)
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("<img src=\"/assets/img/logo.png\" width=\"100%\"/><b><font color=\"#1E003D\">Restoran Terbaik</font></b><br/><small>This is a awesome restoran in Rembang City</small>")
+        .openOn(map)
+}
+
+map.on('click', onMapClick)
